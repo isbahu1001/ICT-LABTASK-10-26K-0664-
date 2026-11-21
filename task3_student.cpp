@@ -32,18 +32,12 @@ int main() {
     Student s;
     s.name = "Ayesha";
 
-    s.setMarks(120);   // Invalid, prints message
-    s.setMarks(85);    // Valid
+    s.setMarks(120);   
+    s.setMarks(85);  
 
     cout << "Name: " << s.name << endl;
     cout << "Marks: " << s.getMarks() << endl;
     cout << "Grade: " << s.getGrade() << endl;
-
-    // Think: What happens if you write s.marks = 90; in main()?
-    // Answer: It causes a compile-time error because 'marks' is a private
-    // member. Private members can only be accessed inside the class's own
-    // member functions, not directly from main(). We must use the public
-    // setter setMarks() instead, which also validates the value.
-
+    
     return 0;
 }
