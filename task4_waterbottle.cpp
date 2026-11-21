@@ -10,21 +10,18 @@ public:
     string brand;
     int capacity;
 
-    // Default constructor
     WaterBottle() {
         brand = "Local";
         capacity = 500;
         waterLevel = 500;
     }
 
-    // Parameterized constructor (starts full)
     WaterBottle(string b, int c) {
         brand = b;
         capacity = c;
         waterLevel = c;
     }
 
-    // Setter with validation
     void setWaterLevel(int w) {
         if (w >= 0 && w <= capacity)
             waterLevel = w;
@@ -32,12 +29,10 @@ public:
             cout << "Invalid water level!" << endl;
     }
 
-    // Getter
     int getWaterLevel() {
         return waterLevel;
     }
 
-    // Drink water
     void drink(int ml) {
         if (ml <= waterLevel) {
             waterLevel -= ml;
@@ -53,7 +48,6 @@ public:
         cout << "Bottle refilled." << endl;
     }
 
-    // Show all info
     void showInfo() {
         cout << "Brand: " << brand
              << ", Capacity: " << capacity << " ml"
